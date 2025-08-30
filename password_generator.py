@@ -1,5 +1,6 @@
 import random
 import string
+import pyperclip
 
 def numbers(passlength):
     password = "".join(random.choice(string.digits) for _ in range(passlength))
@@ -13,3 +14,7 @@ def both(passlength):
     both = string.digits + string.ascii_letters
     password = "".join(random.choice(both) for _ in range(passlength))
     return password
+
+def copy(password):
+    pyperclip.copy(password)
+
